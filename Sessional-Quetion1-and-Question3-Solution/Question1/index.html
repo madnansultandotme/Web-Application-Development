@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Registration</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Applicant Registration</h1>
+        <hr>
+        <br><br>
+        
+        <form id="applicantForm">
+
+            <div class="container-item" id="cnic-field">
+                <label for="cnic">CNIC</label>
+                <input type="text" id="cnic" required>
+                 </div>
+                 <br>
+            <div class="container-item">         
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <br>
+         <div class="container-item">
+         <label for="lastName">Last Name:</label>
+         <input type="text" id="lastName" required>
+         </div>
+            <br>
+            <div class="container-item">
+                <button type="button" onclick="saveData()">Save</button>
+                <button type="button" onclick="printData()">Print Data</button>
+            </div>
+
+        </form>
+        <div id="output"></div>
+    </div>
+</body>
+</html>

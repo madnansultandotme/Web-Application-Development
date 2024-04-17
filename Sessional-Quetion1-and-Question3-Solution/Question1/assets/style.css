@@ -1,0 +1,39 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.container-item
+{
+    display: flex;
+    gap: 50px;
+}
+input[type="text"]{
+    width: 50%;
+    padding: 10px;
+ /* border-radius: 14px; optional property */
+    box-sizing: border-box;
+}
+#cnic-field{
+    gap: 88px;
+}
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
