@@ -1,0 +1,50 @@
+.container {
+    display: block;
+    justify-content: left;
+    height: 100%;
+/* Green background color for the solitaire */
+}
+
+.solitaire {
+    display: block;
+    justify-content: left;
+}
+
+.card {
+    height: 350px;
+    width: 200px;
+    /* margin-right: 20px; Adjust the margin between cards */
+    background-size: cover;
+    position: relative; /* Allows absolute positioning of the cards */
+    border: 2px solid red;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#A-D {
+    margin-left: 0;
+    left: 40;
+    top: 0;
+}
+
+#K-D {
+    margin-left: 40px; /* Adjust the margin for the K-D card */
+    left: 35;  top: 95;
+}
+
+#Q-D {
+    margin-left: 80px; /* Adjust the margin for the Q-D card */
+    left: 30px;
+}
+
+#J-D {
+    margin-left: 120px; /* Adjust the margin for the J-D card */
+    left: 25px;
+}
+
+#D-10 {
+    margin-left: 160px; /* Adjust the margin for the 10-D card */
+}
