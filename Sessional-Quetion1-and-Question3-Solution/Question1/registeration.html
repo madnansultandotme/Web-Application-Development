@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./assets/style.css"> -->
+    <script>
+        function DisplayApplicants() {
+    // Check if applicant data exists in localStorage
+    if (localStorage.getItem("applicants")) {
+        // Retrieve saved applicant data from localStorage
+        var sessionString = localStorage.getItem("applicants");
+        var applicants = JSON.parse(sessionString);
+
+        // Display applicant data
+        let output = "<h2>Applicant Data</h2>";
+        output += "<table>";
+        output += "<tr><th>Cnic</th><th>First Name</th><th>Last Name</th></tr>";
+        applicants.forEach(applicant => {
+            output += "<tr>";
+            output += "<td>" + applicant.cnic + "</td>";
+            output += "<td>" + applicant.firstName + "</td>";
+            output += "<td>" + applicant.lastName + "</td>";
+            output += "</tr>";
+        });
+        output += "</table>";
+
+        document.getElementById("output").innerHTML = output;
+    } else {
+        // Display a message if no applicant data is found
+        document.getElementById("output").innerHTML = "<h2>No Applicant Data Found</h2>";
+    }
+}
+
+// Call the DisplayApplicants() function when the page loads
+window.onload = DisplayApplicants;
+
+    </script>
+    <style>
+#output{
+    display: flex;
+    width:100%;
+    height: fit-content;
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid red 2px; */
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid #d5b2b2;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+    </style>
+    <title>Registration</title>
+</head>
+<body onload="DisplayApplicants()">
+    <div id="output"></div>
+</body>
+</html>
